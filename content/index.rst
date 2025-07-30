@@ -1,6 +1,5 @@
 .. _index:
-
-Reproducible research - Preparing code to be usable by you and others in the future
+NTRU - Preparing code to be usable by you and others in the future
 ===================================================================================
 
 Have you ever spent days **trying to repeat the results from few weeks or months
