@@ -1,4 +1,4 @@
-# Introduction - How it all connects
+# Introduction to NTRU- How it all connects
 
 ```{instructor-note}
 - 10 min teaching/discussion
