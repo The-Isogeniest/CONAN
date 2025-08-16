@@ -1,4 +1,3 @@
-# [Reproducible research - Preparing code to be usable by you and others in the future](https://coderefinery.github.io/reproducible-research/)
+# [CONAN - Tool for Post-Quantum Lattice Based Cryptanalysis](https://the-isogeniest.github.io/CONAN/)
 
-- [Credit and license](https://coderefinery.github.io/reproducible-research/license/)
-ABC.
+This repository is a software implementation of our tool as proposed in (Link to paper to be added later).
