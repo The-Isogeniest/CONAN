@@ -8,3 +8,62 @@ $$
 \mathcal{L}_B = \mathbb{Z}^d B 
 = \left\{ \sum_{i=0}^{d-1} \gamma_i \mathbf{b}_i : \gamma_i \in \mathbb{Z} \right\}.
 $$
+
+# Lattice
+
+The matrix $B$ is called the **basis matrix** for the lattice $\mathcal{L}_B$.  
+Here, $d$, i.e., the number of linearly independent rows in the basis matrix, is called the *rank*,  
+and $m$ is called the *dimension* of $\mathcal{L}_B$.  
+
+The lattice is referred to as *full-rank* if $d = m$.  
+If $\mathbf{b}_i \in \mathbb{Z}^m$, we call the lattice an *integral lattice*.  
+For this work, we consider full-rank integral lattices.  
+
+The **volume** of a lattice $\mathcal{L}_B$ defined by a basis matrix $B$ is given by  
+
+$$
+\mathrm{vol}(\mathcal{L}_B) = \sqrt{\lvert \det(BB^{\mathsf{T}}) \rvert},
+$$
+
+and it is independent of the choice of basis.  
+
+For $i \in \{0,1,\ldots,d-1\}$, define $\pi_i$ to be the projection onto the space orthogonal to the span of $\{\mathbf{b}_0, \ldots, \mathbf{b}_{i-1}\}$,  
+and denote the **Gram–Schmidt basis** as  
+
+$$
+\{\mathbf{b}_0^\star, \mathbf{b}_1^\star, \ldots, \mathbf{b}_{d-1}^\star\}, \quad 
+\mathbf{b}_i^\star = \pi_i(\mathbf{b}_i).
+$$
+
+We refer to the lattice generated from $\{ \pi_\ell(\mathbf{b}_\ell), \ldots, \pi_\ell(\mathbf{b}_{r-1})\}$ as the **projected sublattice**, denoted by $\mathcal{L}_{B[\ell,r)}$.  
+
+We refer to the lengths $\lVert \mathbf{b}_i^\star \rVert$ for $i \in \{0,1,\ldots,d-1\}$ as the **profile** of the basis $B$.
+
+---
+
+**Definition (q-ary lattice).**  
+A lattice of dimension $d$ is called a *$q$-ary lattice* if  
+
+$$
+q\mathbb{Z}^d \subseteq \mathcal{L}_B
+$$
+
+for some $q > 0$.
+
+---
+
+**Definition (Minimum length).**  
+The minimum length $\lambda_1(\mathcal{L})$ of a lattice $\mathcal{L}$ is defined as the length of its shortest nonzero vector:
+
+$$
+\lambda_1(\mathcal{L}) \;=\; \min_{\mathbf{v} \in \mathcal{L} \setminus \{0\}} \; \lVert \mathbf{v} \rVert.
+$$
+
+---
+
+**Definition (Gaussian heuristic).**  
+Given a random $d$-dimensional lattice $\mathcal{L}_B$ defined by basis $B$, the Gaussian heuristic estimates that the expected length of the shortest nonzero vector in $\mathcal{L}_B$ is
+
+$$
+\lambda_1(\mathcal{L}_B) \;\approx\; \sqrt{\tfrac{d}{2 \pi e}} \, \mathrm{vol}(\mathcal{L}_B)^{\tfrac{1}{d}}.
+$$
