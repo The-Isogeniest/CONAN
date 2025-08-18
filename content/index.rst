@@ -33,39 +33,16 @@ reproducible environments and computational steps** for our future selves and ot
    :maxdepth: 1
    :caption: Introduction to Lattices
    :hidden:
-
    Lattice.md
    NTRU.md
 
 .. toctree::
    :maxdepth: 1
-   :caption: Core episodes
+   :caption: Lattice Attacks
    :hidden:
-
-   intro.md
-   motivation.md
-   organizing-projects.md
-   workflow-management.md
-   dependencies.md
-   environments.md
-   where-to-go.md
-
 
 .. toctree::
    :maxdepth: 1
-   :caption: Reference
+   :caption: Parameter Selections
    :hidden:
 
-   Shell crash course <https://youtu.be/xbTTDLA3txI>
-   exercises
-   guide
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: About
-   :hidden:
-
-   All lessons <https://coderefinery.org/lessons/core/>
-   CodeRefinery <https://coderefinery.org/>
-   Reusing <https://coderefinery.org/lessons/reusing/>lessons/reusing/>
