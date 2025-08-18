@@ -33,6 +33,7 @@ reproducible environments and computational steps** for our future selves and ot
    :maxdepth: 1
    :caption: Introduction to Lattices
    :hidden:
+
    Lattice.md
    NTRU.md
 
