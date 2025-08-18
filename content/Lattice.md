@@ -9,8 +9,6 @@ $$
 = \left\{ \sum_{i=0}^{d-1} \gamma_i \mathbf{b}_i : \gamma_i \in \mathbb{Z} \right\}.
 $$
 
-# Lattice
-
 The matrix $B$ is called the **basis matrix** for the lattice $\mathcal{L}_B$.  
 Here, $d$, i.e., the number of linearly independent rows in the basis matrix, is called the *rank*,  
 and $m$ is called the *dimension* of $\mathcal{L}_B$.  
