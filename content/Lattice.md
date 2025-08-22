@@ -65,3 +65,19 @@ Given a random $d$-dimensional lattice $\mathcal{L}_B$ defined by basis $B$, the
 $$
 \lambda_1(\mathcal{L}_B) \;\approx\; \sqrt{\tfrac{d}{2 \pi e}} \, \mathrm{vol}(\mathcal{L}_B)^{\tfrac{1}{d}}.
 $$
+
+
+### Definition (Hard lattice problems)
+
+Let $\mathcal{L}_B \subset \mathbb{R}^d$ be a full-rank lattice defined by the basis $B$.
+
+1. **Shortest Vector Problem (SVP):**  
+   Find a nonzero vector $\mathbf{v} \in \mathcal{L}_B$ such that  
+   $\|\mathbf{v}\| = \lambda_1(\mathcal{L}_B)$.
+
+2. **Closest Vector Problem (CVP):**  
+   Find a vector $\mathbf{v} \in \mathcal{L}_B$ closest to the given target vector $\mathbf{t} \in \mathbb{R}^d$, i.e.,  
+   $\|\mathbf{v} - \mathbf{t}\| \leq \|\mathbf{w} - \mathbf{t}\|$ for all $\mathbf{w} \in \mathcal{L}_B$.  
+
+   Further, when $\|\mathbf{v} - \mathbf{t}\| < \alpha \lambda_1(\mathcal{L}_B)$ for some $\alpha < 1$,  
+   the problem is referred to as the **Bounded Distance Decoding (BDD)** problem.
