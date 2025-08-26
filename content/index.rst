@@ -43,6 +43,7 @@ reproducible environments and computational steps** for our future selves and ot
 
    Lattice.md
    NTRU.md
+   NTRU_Lattice.md
    GRNTRU.md
    Twisted_GRNTRU.md
 
