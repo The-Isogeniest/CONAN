@@ -34,6 +34,14 @@ myst_enable_extensions = [
     "dollarmath",
 ]
 
+# Configure MathJax (for proper inline/block math rendering)
+mathjax3_config = {
+    "tex": {
+        "inlineMath": [["$", "$"], ["\\(", "\\)"]],
+        "displayMath": [["$$", "$$"], ["\\[", "\\]"]],
+    }
+}
+
 nb_execution_mode = "cache"
 
 exclude_patterns = [
