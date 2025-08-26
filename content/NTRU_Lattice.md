@@ -14,8 +14,8 @@ Let $h = f^{-1} * g$ (mod $q$) be a Public Key for NTRU cryptosystem.<br>
 Then, $g = f*h$ (mod $q$) $\Rightarrow g = f*h + q*u$, for some $u \in \frac{\mathbb{Z}[X]}{<X^N-1>}$.<br>
 Also, $f = 1*f + 0*u$.<br>
 Thus, consider the matrix equation,<br>
-$\begin{bmatrix} f_0 & f_1 & \cdots & f_{N-1} & g_0 & g_1 & \cdots & g_{N-1} \end{bmatrix} = 
- \begin{bmatrix} f_0 & f_1 & \cdots & f_{N-1} & u_0 & u_1 & \cdots & u_{N-1} \end{bmatrix} * 
+$\begin{bmatrix} f_0 & f_1 & \cdots & f_{N-1} & g_0 & g_1 & \cdots & g_{N-1} \end{bmatrix} = $<br>
+$\begin{bmatrix} f_0 & f_1 & \cdots & f_{N-1} & u_0 & u_1 & \cdots & u_{N-1} \end{bmatrix} * 
  \begin{bmatrix} 1 & 0 & \cdots & 0 & h_0 & h_1 & \cdots & h_{N-1} \\
                  0 & 1 & \cdots & 0 & h_{N-1} & h_0 & \cdots & h_{N-2} \\
                  \cdots \\
@@ -25,4 +25,15 @@ $\begin{bmatrix} f_0 & f_1 & \cdots & f_{N-1} & g_0 & g_1 & \cdots & g_{N-1} \en
                  \cdots \\
                  0 & 0 & \cdots & 0 & 0 & 0 & \cdots & q \\
  \end{bmatrix}$.<br>
- 
+ This equation represents the matrix form of the Public Key equations. In a more compact form one can write,<br>
+ $\begin{bmatrix} f & g \end{bmatrix} = \begin{bmatrix} f & u \end{bmatrix} * L$,<br>
+where $L = \begin{bmatrix} I_N & H \\ 0_N & qI_N \end{bmatrix}$ is a matrix of dimension $2N \times 2N$,<br>
+$I_N$ is the identity matrix of dimension $N \times N$ and<br>
+$0_N$ is the null matrix of dimension $N \times N$ and<br>
+$H = \begin{bmatrix} h_0 & h_1 & \cdots & h_{N-1} \\
+                     h_{N-1} & h_0 & \cdots & h_{N-2} \\
+                     \cdots \\
+                     h_1 & h_2 & \cdots & h_0 \\ \end{bmatrix}$<br>
+
+Now, note that $\begin{bmatrix} f & g \end{bmatrix}$ is a short vector in $L$.<br>
+Thus, finding $f$ and $g$ from $h$ is equivalent to finding short vector in $L$.
