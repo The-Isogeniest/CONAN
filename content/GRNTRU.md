@@ -12,6 +12,6 @@ $r*s = \sum\limits_{i=1}^{n} (\sum\limits_{g_h * g_k = g_i} r_{g_h}s_{g_k})g_i$
 ### NTRU as a Group-ring
 Another perspective of NTRU defined over the ring $\mathbb{Z}[X]/<X^N-1>$ is to consider it as the Group-ring $\mathbb{Z}C_N$, where $C_N = \lbrace 1,x,x^2,...x^{N-1} \rbrace$ is the cyclic group of order $N$.<br>
 Let $R = \mathbb{Z}$, ring of integers. Then the following changes convert NTRU to a Group-ring.<br>
-$\frac{\mathbb{Z}[X]}{<X^N-1>} \rightarrow \mathbb{Z}C_N$, 
-$\frac{\mathbb{Z}_q[X]}{<X^N-1>} \rightarrow \mathbb{Z}_qC_N$, 
-$\frac{\mathbb{Z}_p[X]}{<X^N-1>} \rightarrow \mathbb{Z}_pC_N$
+$\frac{\mathbb{Z}[X]}{<X^N-1>} \cong \mathbb{Z}C_N$<br>
+$\frac{\mathbb{Z}_q[X]}{<X^N-1>} \cong \mathbb{Z}_qC_N$<br> 
+$\frac{\mathbb{Z}_p[X]}{<X^N-1>} \cong \mathbb{Z}_pC_N$
