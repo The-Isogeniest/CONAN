@@ -10,4 +10,4 @@ $r+s = \sum\limits_{i=1}^{n} (r_{g_i} + s_{g_i})g_i$<br>
 $r*s = \sum\limits_{i=1}^{n} (\sum\limits_{g_h * g_k = g_i} r_{g_h}s_{g_k})g_i$
 
 ### NTRU as a Group-ring
-Another perspective of NTRU defined over the ring $ℤ[X]/<X^N-1>$ is to consider it as the Group-ring $ℤC_N$, where $C_N = \lbrace 1,x,x^2,...x^{N-1} \rbrace$ is the cyclic group of order $N$.
+Another perspective of NTRU defined over the ring $\mathbb{Z}[X]/<X^N-1>$ is to consider it as the Group-ring $ℤC_N$, where $C_N = \lbrace 1,x,x^2,...x^{N-1} \rbrace$ is the cyclic group of order $N$.
