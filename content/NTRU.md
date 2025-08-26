@@ -1,4 +1,4 @@
-# NTRU Lattice
+# NTRU
 
 ### Definition (NTRU)
 
