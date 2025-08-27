@@ -1,0 +1,383 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CONAN documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+      <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx_lesson.css" />
+      <link rel="stylesheet" type="text/css" href="_static/term_role_formatting.css" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx_rtd_theme_ext_color_contrast.css" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js"></script>
+      <script src="_static/doctools.js"></script>
+      <script src="_static/sphinx_highlight.js"></script>
+      <script src="_static/clipboard.min.js"></script>
+      <script src="_static/copybutton.js"></script>
+      <script src="_static/minipres.js"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="_static/togglebutton.js"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["$$", "$$"], ["\\[", "\\]"]]}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script data-domain="coderefinery.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            CONAN
+          </a>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">CONAN</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="#document-How_to_use">How to use</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction to Lattices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="#document-Lattice">Lattice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#document-NTRU">NTRU</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#document-NTRU_Lattice">NTRU Lattice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#document-GRNTRU">GR-NTRU (Group Ring NTRU)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#document-Twisted_GRNTRU">Twisted GR-NTRU</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#document-GR_Lattice">Group-ring Lattice</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lattice Attacks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="#document-Primal">Primal Attack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#document-Hybrid">Hybrid Attack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#document-Subfield">Sub-field Attack</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Parameter Selections</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="#document-Example">Example</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">CONAN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">CONAN  documentation</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/The-Isogenist/CONAN/blob/main/content/index" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ntru-test-for-new-deployment-code-to-be-usable-by-you-and-others-in-the-future">
+<span id="index"></span><h1>NTRU - Test for new deployment code to be usable by you and others in the future<a class="headerlink" href="#ntru-test-for-new-deployment-code-to-be-usable-by-you-and-others-in-the-future" title="Link to this heading"></a></h1>
+<p>Have you ever spent days <strong>trying to repeat the results from few weeks or months
+ago</strong>?  Or you have to do paper revisions, but you just can’t get the results to
+match up? It’s unpleasant for both you and science.</p>
+<p>In this lesson we will explore different methods and tools for better
+reproducibility in research software and data. We will demonstrate how version
+control, workflows, containers, and package managers can be used to <strong>record
+reproducible environments and computational steps</strong> for our future selves and others.</p>
+<div class="admonition-learning-outcomes admonition">
+<p class="admonition-title">Learning outcomes</p>
+<dl class="simple">
+<dt>By the end of this lesson, learners should:</dt><dd><ul class="simple">
+<li><p>Be able to apply well organized directory structure for their project</p></li>
+<li><p>Understand that code can have dependencies, and know how to document them</p></li>
+<li><p>Be able to document computational steps, and have an idea when it can be useful</p></li>
+<li><p>Know about use cases for containers</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="admonition-prerequisites prerequisites admonition" id="prerequisites-0">
+<p class="admonition-title">Prerequisites</p>
+<p>You need to install
+<a class="reference external" href="https://coderefinery.github.io/installation/">Git, Python, and Snakemake</a>.</p>
+<p>If you wish to follow in the terminal and are new to the command line, we
+recorded a <a class="reference external" href="https://youtu.be/xbTTDLA3txI">short shell crash course</a>.</p>
+</div>
+<div class="toctree-wrapper compound">
+<span id="document-How_to_use"></span><section class="tex2jax_ignore mathjax_ignore" id="how-to-use">
+<h2>How to use<a class="headerlink" href="#how-to-use" title="Link to this heading"></a></h2>
+<p>Will edit later</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_images/conan.jpg"><img alt="Conan detecting a paper with NTRU and Lattice-based written on it." src="_images/conan.jpg" style="width: 100%;" />
+</a>
+</figure>
+</section>
+</div>
+<div class="toctree-wrapper compound">
+<span id="document-Lattice"></span><section class="tex2jax_ignore mathjax_ignore" id="lattice">
+<h2>Lattice<a class="headerlink" href="#lattice" title="Link to this heading"></a></h2>
+<p><strong>Definition (Lattice).</strong><br />
+Let <span class="math notranslate nohighlight">\(B\)</span> be a <span class="math notranslate nohighlight">\(d\times m\)</span> matrix with <span class="math notranslate nohighlight">\(d\)</span> linearly independent rows <span class="math notranslate nohighlight">\(\{\mathbf{b}_0,\mathbf{b}_1,\ldots,\mathbf{b}_{d-1}\}\subset \mathbb{R}^m\)</span>.<br />
+The lattice generated by <span class="math notranslate nohighlight">\(B\)</span> is defined as</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{L}_B = \mathbb{Z}^d B 
+= \left\{ \sum_{i=0}^{d-1} \gamma_i \mathbf{b}_i : \gamma_i \in \mathbb{Z} \right\}.
+\]</div>
+<p>The matrix <span class="math notranslate nohighlight">\(B\)</span> is called the <strong>basis matrix</strong> for the lattice <span class="math notranslate nohighlight">\(\mathcal{L}_B\)</span>.<br />
+Here, <span class="math notranslate nohighlight">\(d\)</span>, i.e., the number of linearly independent rows in the basis matrix, is called the <em>rank</em>,<br />
+and <span class="math notranslate nohighlight">\(m\)</span> is called the <em>dimension</em> of <span class="math notranslate nohighlight">\(\mathcal{L}_B\)</span>.</p>
+<p>The lattice is referred to as <em>full-rank</em> if <span class="math notranslate nohighlight">\(d = m\)</span>.<br />
+If <span class="math notranslate nohighlight">\(\mathbf{b}_i \in \mathbb{Z}^m\)</span>, we call the lattice an <em>integral lattice</em>.<br />
+For this work, we consider full-rank integral lattices.</p>
+<p>The <strong>volume</strong> of a lattice <span class="math notranslate nohighlight">\(\mathcal{L}_B\)</span> defined by a basis matrix <span class="math notranslate nohighlight">\(B\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{vol}(\mathcal{L}_B) = \sqrt{\lvert \det(BB^{\mathsf{T}}) \rvert},
+\]</div>
+<p>and it is independent of the choice of basis.</p>
+<p>For <span class="math notranslate nohighlight">\(i \in \{0,1,\ldots,d-1\}\)</span>, define <span class="math notranslate nohighlight">\(\pi_i\)</span> to be the projection onto the space orthogonal to the span of <span class="math notranslate nohighlight">\(\{\mathbf{b}_0, \ldots, \mathbf{b}_{i-1}\}\)</span>,<br />
+and denote the <strong>Gram–Schmidt basis</strong> as</p>
+<div class="math notranslate nohighlight">
+\[
+\{\mathbf{b}_0^\star, \mathbf{b}_1^\star, \ldots, \mathbf{b}_{d-1}^\star\}, \quad 
+\mathbf{b}_i^\star = \pi_i(\mathbf{b}_i).
+\]</div>
+<p>We refer to the lattice generated from <span class="math notranslate nohighlight">\(\{ \pi_\ell(\mathbf{b}_\ell), \ldots, \pi_\ell(\mathbf{b}_{r-1})\}\)</span> as the <strong>projected sublattice</strong>, denoted by <span class="math notranslate nohighlight">\(\mathcal{L}_{B[\ell,r)}\)</span>.</p>
+<p>We refer to the lengths <span class="math notranslate nohighlight">\(\lVert \mathbf{b}_i^\star \rVert\)</span> for <span class="math notranslate nohighlight">\(i \in \{0,1,\ldots,d-1\}\)</span> as the <strong>profile</strong> of the basis <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<hr class="docutils" />
+<p><strong>Definition (q-ary lattice).</strong><br />
+A lattice of dimension <span class="math notranslate nohighlight">\(d\)</span> is called a <em><span class="math notranslate nohighlight">\(q\)</span>-ary lattice</em> if</p>
+<div class="math notranslate nohighlight">
+\[
+q\mathbb{Z}^d \subseteq \mathcal{L}_B
+\]</div>
+<p>for some <span class="math notranslate nohighlight">\(q &gt; 0\)</span>.</p>
+<hr class="docutils" />
+<p><strong>Definition (Minimum length).</strong><br />
+The minimum length <span class="math notranslate nohighlight">\(\lambda_1(\mathcal{L})\)</span> of a lattice <span class="math notranslate nohighlight">\(\mathcal{L}\)</span> is defined as the length of its shortest nonzero vector:</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda_1(\mathcal{L}) \;=\; \min_{\mathbf{v} \in \mathcal{L} \setminus \{0\}} \; \lVert \mathbf{v} \rVert.
+\]</div>
+<hr class="docutils" />
+<p><strong>Definition (Gaussian heuristic).</strong><br />
+Given a random <span class="math notranslate nohighlight">\(d\)</span>-dimensional lattice <span class="math notranslate nohighlight">\(\mathcal{L}_B\)</span> defined by basis <span class="math notranslate nohighlight">\(B\)</span>, the Gaussian heuristic estimates that the expected length of the shortest nonzero vector in <span class="math notranslate nohighlight">\(\mathcal{L}_B\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda_1(\mathcal{L}_B) \;\approx\; \sqrt{\tfrac{d}{2 \pi e}} \, \mathrm{vol}(\mathcal{L}_B)^{\tfrac{1}{d}}.
+\]</div>
+<section id="definition-hard-lattice-problems">
+<h3>Definition (Hard lattice problems)<a class="headerlink" href="#definition-hard-lattice-problems" title="Link to this heading"></a></h3>
+<p>Let <span class="math notranslate nohighlight">\(\mathcal{L}_B \subset \mathbb{R}^d\)</span> be a full-rank lattice defined by the basis <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<ol class="arabic">
+<li><p><strong>Shortest Vector Problem (SVP):</strong><br />
+Find a nonzero vector <span class="math notranslate nohighlight">\(\mathbf{v} \in \mathcal{L}_B\)</span> such that<br />
+<span class="math notranslate nohighlight">\(\|\mathbf{v}\| = \lambda_1(\mathcal{L}_B)\)</span>.</p></li>
+<li><p><strong>Closest Vector Problem (CVP):</strong><br />
+Find a vector <span class="math notranslate nohighlight">\(\mathbf{v} \in \mathcal{L}_B\)</span> closest to the given target vector <span class="math notranslate nohighlight">\(\mathbf{t} \in \mathbb{R}^d\)</span>, i.e.,<br />
+<span class="math notranslate nohighlight">\(\|\mathbf{v} - \mathbf{t}\| \leq \|\mathbf{w} - \mathbf{t}\|\)</span> for all <span class="math notranslate nohighlight">\(\mathbf{w} \in \mathcal{L}_B\)</span>.</p>
+<p>Further, when <span class="math notranslate nohighlight">\(\|\mathbf{v} - \mathbf{t}\| &lt; \alpha \lambda_1(\mathcal{L}_B)\)</span> for some <span class="math notranslate nohighlight">\(\alpha &lt; 1\)</span>,<br />
+the problem is referred to as the <strong>Bounded Distance Decoding (BDD)</strong> problem.</p>
+</li>
+</ol>
+</section>
+</section>
+<span id="document-NTRU"></span><section class="tex2jax_ignore mathjax_ignore" id="ntru">
+<h2>NTRU<a class="headerlink" href="#ntru" title="Link to this heading"></a></h2>
+<section id="definition-ntru">
+<h3>Definition (NTRU)<a class="headerlink" href="#definition-ntru" title="Link to this heading"></a></h3>
+<p>Since its introduction in 1998, several versions of NTRU have emerged in the literature.<br />
+NTRU is now recognized as a hard problem in cryptography rather than a unique cryptosystem that can be extended to different algebraic structures.<br />
+The NTRU design and the problem can be outlined as:</p>
+<p><strong>NTRU:</strong><br />
+Let <span class="math notranslate nohighlight">\(N\)</span> be a prime, <span class="math notranslate nohighlight">\(q\)</span> be a positive integer, and <span class="math notranslate nohighlight">\(f,g \in \mathbb{Z}[x]/\langle x^N-1\rangle\)</span> be two polynomials with small coefficients (mostly ternary) such that <span class="math notranslate nohighlight">\(f\)</span> is invertible modulo <span class="math notranslate nohighlight">\(q\)</span>.<br />
+The pair <span class="math notranslate nohighlight">\((f,g)\)</span> forms the secret key and</p>
+<div class="math notranslate nohighlight">
+\[
+h = f^{-1} \ast g \pmod{q} \in \mathbb{Z}_q[x]/\langle x^N-1\rangle
+\]</div>
+<p>is the public key. The NTRU problem asks to find the private key or its rotations <span class="math notranslate nohighlight">\((x^i \ast f, x^i \ast g)\)</span>.</p>
+<hr class="docutils" />
+<p>The most renowned technique to attack the NTRU problem is to solve SVP in the <span class="math notranslate nohighlight">\(2N\)</span>-dimensional lattice <span class="math notranslate nohighlight">\(\Lambda_{CS}\)</span> generated by the basis</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathcal{M}_{CS} =
+\begin{pmatrix}
+    I_N &amp; \mathcal{H} \\
+    0_N &amp; qI_N
+\end{pmatrix},
+\end{split}\]</div>
+<p>since the vector <span class="math notranslate nohighlight">\((\mathbf{f}, \mathbf{g})\)</span> associated with the private key <span class="math notranslate nohighlight">\((f,g)\)</span> or its rotations are the shortest vectors in the lattice <span class="math notranslate nohighlight">\(\Lambda_{CS}\)</span> with high probability.</p>
+</section>
+</section>
+<span id="document-NTRU_Lattice"></span><section class="tex2jax_ignore mathjax_ignore" id="ntru-lattice">
+<h2>NTRU Lattice<a class="headerlink" href="#ntru-lattice" title="Link to this heading"></a></h2>
+<p>Out of all the attacks proposed on NTRU, the lattice based attack is by far the best in present day literature.</p>
+<section id="ntru-public-key">
+<h3>NTRU Public Key<a class="headerlink" href="#ntru-public-key" title="Link to this heading"></a></h3>
+<p>Let <span class="math notranslate nohighlight">\(T(r_1,r_2) = \lbrace f \in \frac{\mathbb{Z}[X]}{&lt;X^N-1&gt;} \rbrace\)</span> such that <span class="math notranslate nohighlight">\(r_1\)</span> coefficients in <span class="math notranslate nohighlight">\(f\)</span> are <span class="math notranslate nohighlight">\(1\)</span>, <span class="math notranslate nohighlight">\(r_2\)</span> coefficients in <span class="math notranslate nohighlight">\(f\)</span> are <span class="math notranslate nohighlight">\(-1\)</span> and remaining coefficients in <span class="math notranslate nohighlight">\(f\)</span> are <span class="math notranslate nohighlight">\(0\)</span>.
+The set <span class="math notranslate nohighlight">\(T(r_1,r_2)\)</span> is known as the set of ternary polynomials, as the coefficients of these polynomias only take <span class="math notranslate nohighlight">\(3\)</span> different values.<br>
+Now let <span class="math notranslate nohighlight">\(d = \lfloor \frac{N}{3} \rfloor\)</span>. It is observed that with high probability, the elements of <span class="math notranslate nohighlight">\(T(d,d)\)</span> are invertible in <span class="math notranslate nohighlight">\(\frac{\mathbb{Z}_q[X]}{&lt;X^N-1&gt;}\)</span> and <span class="math notranslate nohighlight">\(\frac{\mathbb{Z}_p[X]}{&lt;X^N-1&gt;}\)</span>.<br>
+Let <span class="math notranslate nohighlight">\(f \in T(d,d)\)</span> and <span class="math notranslate nohighlight">\(g \in T(d+1,d)\)</span>.<br>
+Let <span class="math notranslate nohighlight">\(h = f^{-1} * g\)</span> (mod <span class="math notranslate nohighlight">\(q\)</span>).<br>
+The polynomial <span class="math notranslate nohighlight">\(h\)</span> is the public key.</p>
+</section>
+<section id="lattice-construction-from-public-key">
+<h3>Lattice construction from Public Key<a class="headerlink" href="#lattice-construction-from-public-key" title="Link to this heading"></a></h3>
+<p>Let <span class="math notranslate nohighlight">\(h = f^{-1} * g\)</span> (mod <span class="math notranslate nohighlight">\(q\)</span>) be a Public Key for NTRU cryptosystem.<br>
+Then, <span class="math notranslate nohighlight">\(g = f*h\)</span> (mod <span class="math notranslate nohighlight">\(q\)</span>) <span class="math notranslate nohighlight">\(\Rightarrow g = f*h + q*u\)</span>, for some <span class="math notranslate nohighlight">\(u \in \frac{\mathbb{Z}[X]}{&lt;X^N-1&gt;}\)</span>.<br>
+Also, <span class="math notranslate nohighlight">\(f = 1*f + 0*u\)</span>.<br>
+Thus, consider the matrix equation,<br>
+<span class="math notranslate nohighlight">\(\begin{bmatrix} f_0 &amp; f_1 &amp; \cdots &amp; f_{N-1} &amp; g_0 &amp; g_1 &amp; \cdots &amp; g_{N-1} \end{bmatrix} = \)</span><br>
+<span class="math notranslate nohighlight">\(\begin{bmatrix} f_0 &amp; f_1 &amp; \cdots &amp; f_{N-1} &amp; u_0 &amp; u_1 &amp; \cdots &amp; u_{N-1} \end{bmatrix} * 
+ \begin{bmatrix} 1 &amp; 0 &amp; \cdots &amp; 0 &amp; h_0 &amp; h_1 &amp; \cdots &amp; h_{N-1} \\
+                 0 &amp; 1 &amp; \cdots &amp; 0 &amp; h_{N-1} &amp; h_0 &amp; \cdots &amp; h_{N-2} \\
+                 \cdots \\
+                 0 &amp; 0 &amp; \cdots &amp; 1 &amp; h_1 &amp; h_2 &amp; \cdots &amp; h_0 \\
+                 0 &amp; 0 &amp; \cdots &amp; 0 &amp; q &amp; 0 &amp; \cdots &amp; 0 \\
+                 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 &amp; q &amp; \cdots &amp; 0 \\
+                 \cdots \\
+                 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 &amp; 0 &amp; \cdots &amp; q \\
+ \end{bmatrix}\)</span>.<br>
+This equation represents the matrix form of the Public Key equations. In a more compact form one can write,<br>
+<span class="math notranslate nohighlight">\(\begin{bmatrix} f &amp; g \end{bmatrix} = \begin{bmatrix} f &amp; u \end{bmatrix} * L\)</span>,<br>
+where <span class="math notranslate nohighlight">\(L = \begin{bmatrix} I_N &amp; H \\ 0_N &amp; qI_N \end{bmatrix}\)</span> is a matrix of dimension <span class="math notranslate nohighlight">\(2N \times 2N\)</span>,<br>
+<span class="math notranslate nohighlight">\(I_N\)</span> is the identity matrix of dimension <span class="math notranslate nohighlight">\(N \times N\)</span> and<br>
+<span class="math notranslate nohighlight">\(0_N\)</span> is the null matrix of dimension <span class="math notranslate nohighlight">\(N \times N\)</span> and<br>
+<span class="math notranslate nohighlight">\(H = \begin{bmatrix} h_0 &amp; h_1 &amp; \cdots &amp; h_{N-1} \\
+                     h_{N-1} &amp; h_0 &amp; \cdots &amp; h_{N-2} \\
+                     \cdots \\
+                     h_1 &amp; h_2 &amp; \cdots &amp; h_0 \\ \end{bmatrix}\)</span><br></p>
+<p>Now, note that <span class="math notranslate nohighlight">\(\begin{bmatrix} f &amp; g \end{bmatrix}\)</span> is a short vector in <span class="math notranslate nohighlight">\(L\)</span>.<br>
+Thus, finding <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> from <span class="math notranslate nohighlight">\(h\)</span> is equivalent to finding short vector in <span class="math notranslate nohighlight">\(L\)</span>.</p>
+</section>
+</section>
+<span id="document-GRNTRU"></span><section class="tex2jax_ignore mathjax_ignore" id="gr-ntru-group-ring-ntru">
+<h2>GR-NTRU (Group Ring NTRU)<a class="headerlink" href="#gr-ntru-group-ring-ntru" title="Link to this heading"></a></h2>
+<p>It is observed that the Group-ring structure is very useful for generalizing and creating lattices for NTRU and NTRU-like cryptosystems.</p>
+<section id="group-ring-definition">
+<h3>Group Ring Definition<a class="headerlink" href="#group-ring-definition" title="Link to this heading"></a></h3>
+<p>Let <span class="math notranslate nohighlight">\(R\)</span> be a ring and <span class="math notranslate nohighlight">\(G = \lbrace g_1,g_2,\ldots,g_n \rbrace\)</span> be a finite group of order <span class="math notranslate nohighlight">\(n\)</span>.
+Then, the group ring of <span class="math notranslate nohighlight">\(G\)</span> over <span class="math notranslate nohighlight">\(R\)</span> is.<br>
+<span class="math notranslate nohighlight">\(RG = \lbrace \sum\limits_{i=1}^{n}r_{g_i}g_i | r_{g_i} \in R, 1 \leq i \leq n \rbrace\)</span><br>
+The addition and multiplication operations in the <span class="math notranslate nohighlight">\(GR\)</span> are given as follows-<br>
+<span class="math notranslate nohighlight">\(r+s = \sum\limits_{i=1}^{n} (r_{g_i} + s_{g_i})g_i\)</span><br>
+<span class="math notranslate nohighlight">\(r*s = \sum\limits_{i=1}^{n} (\sum\limits_{g_h * g_k = g_i} r_{g_h}s_{g_k})g_i\)</span></p>
+</section>
+<section id="ntru-as-a-group-ring">
+<h3>NTRU as a Group-ring<a class="headerlink" href="#ntru-as-a-group-ring" title="Link to this heading"></a></h3>
+<p>Another perspective of NTRU defined over the ring <span class="math notranslate nohighlight">\(\mathbb{Z}[X]/&lt;X^N-1&gt;\)</span> is to consider it as the Group-ring <span class="math notranslate nohighlight">\(\mathbb{Z}C_N\)</span>, where <span class="math notranslate nohighlight">\(C_N = \lbrace 1,x,x^2,...x^{N-1} \rbrace\)</span> is the cyclic group of order <span class="math notranslate nohighlight">\(N\)</span>.<br>
+Let <span class="math notranslate nohighlight">\(R = \mathbb{Z}\)</span>, ring of integers. Then the following changes convert NTRU to a Group-ring.<br>
+<span class="math notranslate nohighlight">\(\frac{\mathbb{Z}[X]}{&lt;X^N-1&gt;} \cong \mathbb{Z}C_N\)</span><br>
+<span class="math notranslate nohighlight">\(\frac{\mathbb{Z}_q[X]}{&lt;X^N-1&gt;} \cong \mathbb{Z}_qC_N\)</span><br>
+<span class="math notranslate nohighlight">\(\frac{\mathbb{Z}_p[X]}{&lt;X^N-1&gt;} \cong \mathbb{Z}_pC_N\)</span></p>
+</section>
+</section>
+<span id="document-Twisted_GRNTRU"></span><section class="tex2jax_ignore mathjax_ignore" id="twisted-gr-ntru">
+<h2>Twisted GR-NTRU<a class="headerlink" href="#twisted-gr-ntru" title="Link to this heading"></a></h2>
+<p>Will edit later</p>
+</section>
+<span id="document-GR_Lattice"></span><section class="tex2jax_ignore mathjax_ignore" id="group-ring-lattice">
+<h2>Group-ring Lattice<a class="headerlink" href="#group-ring-lattice" title="Link to this heading"></a></h2>
+<p>The Group-ring interpretetion can also be used to construct Lattice for NTRU-like cryptosystems.</p>
+<section id="lattice-from-group-ring">
+<h3>Lattice from Group-ring<a class="headerlink" href="#lattice-from-group-ring" title="Link to this heading"></a></h3>
+<p>Let <span class="math notranslate nohighlight">\(G = \lbrace a_1,a_2,\cdots a_n \rbrace\)</span> be a group and <span class="math notranslate nohighlight">\(R\)</span> be a ring. <span class="math notranslate nohighlight">\(R\)</span> is preferably commutative with identity.<br>
+The choice of such <span class="math notranslate nohighlight">\(R\)</span> is so that few invertible elements may be present in <span class="math notranslate nohighlight">\(R\)</span>.<br>
+Let <span class="math notranslate nohighlight">\(RG\)</span> be the group ring. Let <span class="math notranslate nohighlight">\(f,g \in RG\)</span> such that <span class="math notranslate nohighlight">\(f\)</span> is invertible.<br>
+Let <span class="math notranslate nohighlight">\(h = f^{-1} * g\)</span> be the Public Key.<br>
+Then, <span class="math notranslate nohighlight">\(g = f * h\)</span>. We can construct similar matrix equations as we did for NTRU.<br>
+<span class="math notranslate nohighlight">\(f = f * 1 + u * 0\)</span> and <span class="math notranslate nohighlight">\(g = f * h + u * q\)</span>.<br>
+<span class="math notranslate nohighlight">\(H = \begin{bmatrix} h_{a_1^{-1}a_1} &amp; h_{a_1^{-1}a_2} &amp; \cdots &amp; h_{a_1^{-1}a_n} \\
+                     h_{a_2^{-1}a_1} &amp; h_{a_2^{-1}a_2} &amp; \cdots &amp; h_{a_2^{-1}a_n} \\
+                     \cdots \\
+                     h_{a_n^{-1}a_1} &amp; h_{a_2^{-1}a_2} &amp; \cdots &amp; h_{a_n^{-1}a_n} \end{bmatrix}\)</span><br>
+<span class="math notranslate nohighlight">\(\begin{bmatrix} f &amp; g \end{bmatrix} = \begin{bmatrix} f &amp; u \end{bmatrix} * \begin{bmatrix} I_n &amp; H \\ 0_n &amp; qI_n \end{bmatrix}\)</span>.<br>
+<br>
+However if the multiplication is from right, i.e., <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are column vectors instead of row vectors,<br>
+then the equation and structure of <span class="math notranslate nohighlight">\(H\)</span> changs a little.<br>
+<span class="math notranslate nohighlight">\(g = H * f + q * u\)</span> and <span class="math notranslate nohighlight">\(H = [h_{a_ia_j^{-1}}]\)</span> instead of <span class="math notranslate nohighlight">\(H = [h_{a_i^{-1}a_j}]\)</span>.</p>
+</section>
+<section id="lattice-from-twisted-group-ring">
+<h3>Lattice from twisted Group-ring<a class="headerlink" href="#lattice-from-twisted-group-ring" title="Link to this heading"></a></h3>
+<p>Will edit later.</p>
+</section>
+</section>
+</div>
+<div class="toctree-wrapper compound">
+<span id="document-Combinatorial"></span><p>Will edit later</p>
+<span id="document-Primal"></span><section class="tex2jax_ignore mathjax_ignore" id="primal-attack">
+<h2>Primal Attack<a class="headerlink" href="#primal-attack" title="Link to this heading"></a></h2>
+<p>Will edit later</p>
+</section>
+<span id="document-Hybrid"></span><section class="tex2jax_ignore mathjax_ignore" id="hybrid-attack">
+<h2>Hybrid Attack<a class="headerlink" href="#hybrid-attack" title="Link to this heading"></a></h2>
+<p>Will edit later</p>
+</section>
+<span id="document-Subfield"></span><section class="tex2jax_ignore mathjax_ignore" id="sub-field-attack">
+<h2>Sub-field Attack<a class="headerlink" href="#sub-field-attack" title="Link to this heading"></a></h2>
+<p>Will edit later</p>
+</section>
+</div>
+<div class="toctree-wrapper compound">
+<span id="document-Example"></span><section class="tex2jax_ignore mathjax_ignore" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
+<p>Will edit later</p>
+</section>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Ali Raya.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

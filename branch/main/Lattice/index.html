@@ -1,0 +1,215 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lattice &mdash; CONAN  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=e9df6548" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=187304be"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=582ca9e2"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["$$", "$$"], ["\\[", "\\]"]]}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script data-domain="coderefinery.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="NTRU" href="../NTRU/" />
+    <link rel="prev" title="How to use" href="../How_to_use/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            CONAN
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">CONAN</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../How_to_use/">How to use</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction to Lattices</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lattice</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#definition-hard-lattice-problems">Definition (Hard lattice problems)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../NTRU/">NTRU</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NTRU_Lattice/">NTRU Lattice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GRNTRU/">GR-NTRU (Group Ring NTRU)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Twisted_GRNTRU/">Twisted GR-NTRU</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GR_Lattice/">Group-ring Lattice</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lattice Attacks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Primal/">Primal Attack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Hybrid/">Hybrid Attack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Subfield/">Sub-field Attack</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Parameter Selections</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Example/">Example</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">CONAN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Lattice</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/The-Isogenist/CONAN/blob/main/content/Lattice.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="lattice">
+<h1>Lattice<a class="headerlink" href="#lattice" title="Link to this heading"></a></h1>
+<p><strong>Definition (Lattice).</strong><br />
+Let <span class="math notranslate nohighlight">\(B\)</span> be a <span class="math notranslate nohighlight">\(d\times m\)</span> matrix with <span class="math notranslate nohighlight">\(d\)</span> linearly independent rows <span class="math notranslate nohighlight">\(\{\mathbf{b}_0,\mathbf{b}_1,\ldots,\mathbf{b}_{d-1}\}\subset \mathbb{R}^m\)</span>.<br />
+The lattice generated by <span class="math notranslate nohighlight">\(B\)</span> is defined as</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{L}_B = \mathbb{Z}^d B 
+= \left\{ \sum_{i=0}^{d-1} \gamma_i \mathbf{b}_i : \gamma_i \in \mathbb{Z} \right\}.
+\]</div>
+<p>The matrix <span class="math notranslate nohighlight">\(B\)</span> is called the <strong>basis matrix</strong> for the lattice <span class="math notranslate nohighlight">\(\mathcal{L}_B\)</span>.<br />
+Here, <span class="math notranslate nohighlight">\(d\)</span>, i.e., the number of linearly independent rows in the basis matrix, is called the <em>rank</em>,<br />
+and <span class="math notranslate nohighlight">\(m\)</span> is called the <em>dimension</em> of <span class="math notranslate nohighlight">\(\mathcal{L}_B\)</span>.</p>
+<p>The lattice is referred to as <em>full-rank</em> if <span class="math notranslate nohighlight">\(d = m\)</span>.<br />
+If <span class="math notranslate nohighlight">\(\mathbf{b}_i \in \mathbb{Z}^m\)</span>, we call the lattice an <em>integral lattice</em>.<br />
+For this work, we consider full-rank integral lattices.</p>
+<p>The <strong>volume</strong> of a lattice <span class="math notranslate nohighlight">\(\mathcal{L}_B\)</span> defined by a basis matrix <span class="math notranslate nohighlight">\(B\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{vol}(\mathcal{L}_B) = \sqrt{\lvert \det(BB^{\mathsf{T}}) \rvert},
+\]</div>
+<p>and it is independent of the choice of basis.</p>
+<p>For <span class="math notranslate nohighlight">\(i \in \{0,1,\ldots,d-1\}\)</span>, define <span class="math notranslate nohighlight">\(\pi_i\)</span> to be the projection onto the space orthogonal to the span of <span class="math notranslate nohighlight">\(\{\mathbf{b}_0, \ldots, \mathbf{b}_{i-1}\}\)</span>,<br />
+and denote the <strong>Gram–Schmidt basis</strong> as</p>
+<div class="math notranslate nohighlight">
+\[
+\{\mathbf{b}_0^\star, \mathbf{b}_1^\star, \ldots, \mathbf{b}_{d-1}^\star\}, \quad 
+\mathbf{b}_i^\star = \pi_i(\mathbf{b}_i).
+\]</div>
+<p>We refer to the lattice generated from <span class="math notranslate nohighlight">\(\{ \pi_\ell(\mathbf{b}_\ell), \ldots, \pi_\ell(\mathbf{b}_{r-1})\}\)</span> as the <strong>projected sublattice</strong>, denoted by <span class="math notranslate nohighlight">\(\mathcal{L}_{B[\ell,r)}\)</span>.</p>
+<p>We refer to the lengths <span class="math notranslate nohighlight">\(\lVert \mathbf{b}_i^\star \rVert\)</span> for <span class="math notranslate nohighlight">\(i \in \{0,1,\ldots,d-1\}\)</span> as the <strong>profile</strong> of the basis <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<hr class="docutils" />
+<p><strong>Definition (q-ary lattice).</strong><br />
+A lattice of dimension <span class="math notranslate nohighlight">\(d\)</span> is called a <em><span class="math notranslate nohighlight">\(q\)</span>-ary lattice</em> if</p>
+<div class="math notranslate nohighlight">
+\[
+q\mathbb{Z}^d \subseteq \mathcal{L}_B
+\]</div>
+<p>for some <span class="math notranslate nohighlight">\(q &gt; 0\)</span>.</p>
+<hr class="docutils" />
+<p><strong>Definition (Minimum length).</strong><br />
+The minimum length <span class="math notranslate nohighlight">\(\lambda_1(\mathcal{L})\)</span> of a lattice <span class="math notranslate nohighlight">\(\mathcal{L}\)</span> is defined as the length of its shortest nonzero vector:</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda_1(\mathcal{L}) \;=\; \min_{\mathbf{v} \in \mathcal{L} \setminus \{0\}} \; \lVert \mathbf{v} \rVert.
+\]</div>
+<hr class="docutils" />
+<p><strong>Definition (Gaussian heuristic).</strong><br />
+Given a random <span class="math notranslate nohighlight">\(d\)</span>-dimensional lattice <span class="math notranslate nohighlight">\(\mathcal{L}_B\)</span> defined by basis <span class="math notranslate nohighlight">\(B\)</span>, the Gaussian heuristic estimates that the expected length of the shortest nonzero vector in <span class="math notranslate nohighlight">\(\mathcal{L}_B\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda_1(\mathcal{L}_B) \;\approx\; \sqrt{\tfrac{d}{2 \pi e}} \, \mathrm{vol}(\mathcal{L}_B)^{\tfrac{1}{d}}.
+\]</div>
+<section id="definition-hard-lattice-problems">
+<h2>Definition (Hard lattice problems)<a class="headerlink" href="#definition-hard-lattice-problems" title="Link to this heading"></a></h2>
+<p>Let <span class="math notranslate nohighlight">\(\mathcal{L}_B \subset \mathbb{R}^d\)</span> be a full-rank lattice defined by the basis <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<ol class="arabic">
+<li><p><strong>Shortest Vector Problem (SVP):</strong><br />
+Find a nonzero vector <span class="math notranslate nohighlight">\(\mathbf{v} \in \mathcal{L}_B\)</span> such that<br />
+<span class="math notranslate nohighlight">\(\|\mathbf{v}\| = \lambda_1(\mathcal{L}_B)\)</span>.</p></li>
+<li><p><strong>Closest Vector Problem (CVP):</strong><br />
+Find a vector <span class="math notranslate nohighlight">\(\mathbf{v} \in \mathcal{L}_B\)</span> closest to the given target vector <span class="math notranslate nohighlight">\(\mathbf{t} \in \mathbb{R}^d\)</span>, i.e.,<br />
+<span class="math notranslate nohighlight">\(\|\mathbf{v} - \mathbf{t}\| \leq \|\mathbf{w} - \mathbf{t}\|\)</span> for all <span class="math notranslate nohighlight">\(\mathbf{w} \in \mathcal{L}_B\)</span>.</p>
+<p>Further, when <span class="math notranslate nohighlight">\(\|\mathbf{v} - \mathbf{t}\| &lt; \alpha \lambda_1(\mathcal{L}_B)\)</span> for some <span class="math notranslate nohighlight">\(\alpha &lt; 1\)</span>,<br />
+the problem is referred to as the <strong>Bounded Distance Decoding (BDD)</strong> problem.</p>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../How_to_use/" class="btn btn-neutral float-left" title="How to use" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../NTRU/" class="btn btn-neutral float-right" title="NTRU" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Ali Raya.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
