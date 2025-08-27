@@ -46,6 +46,7 @@ reproducible environments and computational steps** for our future selves and ot
    NTRU_Lattice.md
    GRNTRU.md
    Twisted_GRNTRU.md
+   GR_Lattice.md
 
 .. toctree::
    :maxdepth: 1
