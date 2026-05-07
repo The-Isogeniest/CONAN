@@ -1,7 +1,6 @@
 .. _index:
 
 CONAN
-
 ===================================================================================
 
 CONAN (CONstructive ANalysis) is a tool that analyses the security of any Lattice-based Cryptosystem based on parameter settings and the underlying algebraic structure used in it. This website is a documentation of the working of CONAN.
